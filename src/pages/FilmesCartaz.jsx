@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Card, Col, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import {apiFilmes} from '../services/apiFilmes';
+import { apiFilmes } from '../services/apiFilmes';
 
-const FilmesPopulares = () => {
+const FilmesCartaz = () => {
 
     const [filmes, setFilmes] = useState([])
 
     useEffect(() => {
 
-        apiFilmes.get('movie/popular?language=pt-BR').then(resultado => {
+        apiFilmes.get('movie/now_playing?language=pt-BR').then(resultado => {
             setFilmes(resultado.data.results)
         })
 
@@ -17,7 +17,7 @@ const FilmesPopulares = () => {
 
     return (
         <div>
-            <h1>Filmes Populares</h1>
+            <h1>Filmes Em Cartaz</h1>
 
             <Row>
                 {filmes.map(item => (
@@ -42,4 +42,4 @@ const FilmesPopulares = () => {
     )
 }
 
-export default FilmesPopulares;
+export default FilmesCartaz;

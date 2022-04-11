@@ -7,14 +7,15 @@ const Menu = () => {
     <div>
       <Navbar bg="dark" variant="dark" className="md-3">
         <Container>
-          <Navbar.Brand href="/">Navbar</Navbar.Brand>
+          <Navbar.Brand href="/">Filmes Populares</Navbar.Brand>
           <Nav className="me-auto">
-            <Link className="nav-link" to="/filmespopulares">FilmesPopulares</Link>
+            <Link className="nav-link" to="/filmeslancamentos">FilmesLançamentos</Link>
+            <Link className="nav-link" to="/filmesCartaz">FilmesCartaz</Link>
           </Nav>
         </Container>
       </Navbar>
     </div>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;
